@@ -10,7 +10,7 @@ dev:
   steps:
     - pip-install
     - internal/watch:
-        code: python app.py
+        code: python app.py 
         reload: true
         
 # Build definition
